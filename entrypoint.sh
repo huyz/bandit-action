@@ -65,3 +65,4 @@ unique_directories="/home/dev"
 for dir in "${unique_directories[@]}"; do
     bandit -r $dir $LEVEL $CONFIDENCE $EXCLUDED_PATHS $EXIT_ZERO $SKIPS $INI_PATH
 done
+ 

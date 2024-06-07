@@ -71,3 +71,10 @@ with:
   confidence: high
   exit_zero: true
 ```
+
+
+## Deploy new version
+
+- increment version in setup.cfg
+- run python setup.py sdist
+- change reference to dist/.../.tar.gz in Dockerfile

@@ -1,10 +1,10 @@
-FROM python:3.9-alpine
+FROM python:3.12-alpine
 
 WORKDIR /app
 
-COPY dist/bandit-github-formatter-1.0.tar.gz bandit-github-formatter-1.0.tar.gz
-RUN pip install pyyaml==6.0.1 bandit==1.7.0 requests==2.25.1 bandit-github-formatter-1.0.tar.gz
-RUN rm bandit-github-formatter-1.0.tar.gz
+COPY dist/bandit_github_formatter-1.2.0.tar.gz bandit_github_formatter-1.2.0.tar.gz
+RUN pip install pyyaml==6.0.1 bandit requests bandit_github_formatter-1.2.0.tar.gz
+RUN rm bandit_github_formatter-1.2.0.tar.gz
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

@@ -63,5 +63,5 @@ unique_directories=$(for dir in "$@"; do echo "$dir"; done | sort -u)
 
 # run bandit on each unique files/directories
 for dir in $unique_directories; do
-    bandit -r "$dir" $LEVEL $CONFIDENCE $EXCLUDED_PATHS $EXIT_ZERO $SKIPS $INI_PATH
+    bandit -r "$dir" $LEVEL $CONFIDENCE $EXCLUDED_PATHS $EXIT_ZERO $SKIPS $INI_PATH -f github
 done
